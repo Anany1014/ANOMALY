@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+  <script type="module" src="/@vite/client"></script>
+
+  <meta charset="UTF-8" />
+  <script>
+    window.addEventListener('error', function (e) {
+      var d = document.createElement('div');
+      d.style.position = 'fixed';
+      d.style.top = '0';
+      d.style.left = '0';
+      d.style.width = '100%';
+      d.style.background = '#880000';
+      d.style.color = '#ffffff';
+      d.style.padding = '15px';
+      d.style.zIndex = '999999';
+      d.style.fontFamily = 'monospace';
+      d.style.fontSize = '12px';
+      d.style.whiteSpace = 'pre-wrap';
+      d.style.borderBottom = '3px solid red';
+      d.innerText = 'Runtime Error: ' + e.message + '\nSource: ' + e.filename + ':' + e.lineno;
+      document.body.appendChild(d);
+    });
+    window.addEventListener('unhandledrejection', function (e) {
+      var d = document.createElement('div');
+      d.style.position = 'fixed';
+      d.style.top = '40px';
+      d.style.left = '0';
+      d.style.width = '100%';
+      d.style.background = '#550000';
+      d.style.color = '#ffffff';
+      d.style.padding = '15px';
+      d.style.zIndex = '999999';
+      d.style.fontFamily = 'monospace';
+      d.style.fontSize = '12px';
+      d.style.whiteSpace = 'pre-wrap';
+      d.style.borderBottom = '3px solid #ff5555';
+      d.innerText = 'Promise Rejection: ' + e.reason;
+      document.body.appendChild(d);
+    });
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANOMALY — The Curated Multiverse</title>
+</head>
+
+<body class="bg-black text-white overflow-hidden select-none">
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
