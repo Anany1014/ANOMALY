@@ -84,7 +84,6 @@ Each pedestal contains a fully interactive 3D WebGL canvas simulation:
 
 ```yaml
 ANOMALY/
-├── Context/                 # Design specs and requirements
 ├── src/                     # Core React & 3D layout codebase
 │   ├── scene/               # R3F WebGL elements
 │   │   ├── player/          # Avatar meshes & physics camera
